@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Someone Special ❤️</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Someone Special ❤️</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <div class="container">
+  <div class="hearts"></div>
 
-        <h1>Hey Beautiful ✨</h1>
+  <div class="card">
 
-        <p id="shayari">
-            "Tum hasi ho toh lagta hai duniya theek chal rahi hai..." ❤️
-        </p>
+    <h1>Hey Beautiful ✨</h1>
 
-        <button onclick="changeText()">
-            Click Me 💌
-        </button>
+    <p id="text">
+      Tumhari smile pura din better bana deti hai ❤️
+    </p>
 
-    </div>
+    <button onclick="changeText()">
+      Click Me 💌
+    </button>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
