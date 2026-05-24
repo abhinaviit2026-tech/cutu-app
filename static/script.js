@@ -1,26 +1,60 @@
 const lines = [
 
-"Tum online aati ho toh notification bhi cute lagta hai 💖",
+"Tumhari smile pura din acha bana deti hai 💖",
 
-"Sach bolu? Tumhari vibe dangerous level ki achi hai ✨",
+"Sach bolu...? Tum dangerous level ki cute ho 😭",
 
-"Agar smiles addictive hoti... toh shayad main guilty hota 😭",
+"Tumhari vibe bohot alag hai ✨",
 
-"Tumhari ek reply = pura din acha ❤️",
+"Shayad tumhe idea bhi nahi... tum kitni special ho ❤️",
 
-"Shayad tumhe pata nahi... par tum kaafi special ho 🌸"
+"Aur haan... ye site sirf tumhare liye bani hai 🌸"
 
 ];
 
-let index = 0;
+let current = 0;
+
+function typeText(text){
+
+    let i = 0;
+
+    const typing = document.getElementById("typing");
+
+    typing.innerHTML = "";
+
+    const interval = setInterval(() => {
+
+        typing.innerHTML += text.charAt(i);
+
+        i++;
+
+        if(i >= text.length){
+
+            clearInterval(interval);
+        }
+
+    },50);
+}
 
 function changeText(){
 
-    document.getElementById("shayari").innerText = lines[index];
+    current++;
 
-    index++;
+    if(current >= lines.length){
 
-    if(index >= lines.length){
-        index = 0;
+        current = 0;
     }
+
+    typeText(lines[current]);
+}
+
+function openSite(){
+
+    document.getElementById("intro").style.display = "none";
+
+    document.getElementById("mainCard").classList.remove("hidden");
+
+    document.getElementById("music").play();
+
+    typeText(lines[0]);
 }
