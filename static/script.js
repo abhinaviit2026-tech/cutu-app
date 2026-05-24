@@ -13,6 +13,8 @@ const lines = [
 ];
 
 let current = 0;
+let typingInterval;
+
 
 function typeText(text){
 
@@ -67,4 +69,4 @@ function openSite(){
     });
 
     typeText(lines[0]);
-}
+}s
