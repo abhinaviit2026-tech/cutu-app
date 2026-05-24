@@ -54,7 +54,17 @@ function openSite(){
 
     document.getElementById("mainCard").classList.remove("hidden");
 
-    document.getElementById("music").play();
+    let music = document.getElementById("music");
+
+    music.volume = 0.5;
+
+    music.play()
+    .then(() => {
+        console.log("Music started");
+    })
+    .catch((error) => {
+        console.log("Error:", error);
+    });
 
     typeText(lines[0]);
 }
